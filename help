@@ -1,5 +1,0 @@
-Escribir pa correr la wea
-	#! /bin/bash
-
-Hacer ejecutable:
-	chmod +x <archivo>
