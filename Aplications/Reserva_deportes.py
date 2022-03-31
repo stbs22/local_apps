@@ -31,7 +31,7 @@ URL = "https://pregrado.uai.cl/WebPages/Deporte/Reservas.aspx"
 path = "chromedriver"
 
 usuario = "eshernandez@alumnos.uai.cl"
-contraseña = '6Tofilijones20193804%;'
+contraseña = '7Tofilijones20193804%;Parangari'
 
 driver = webdriver.Chrome(path)
 
