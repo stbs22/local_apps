@@ -1,5 +1,5 @@
 #!/bin/bash
 
-rm -rf ./Aplications ./Fotos
-cp -r ~/Aplications ./
-cp -r ~/Fotos ./
+rm -rf -v ./Aplications ./Fotos
+cp -r -v ~/Aplications ./
+cp -r -v ~/Fotos ./
