@@ -1,15 +1,21 @@
 #!/bin/bash
 
-user_input=$(zenity --password )
 
-if [ $? -eq 0 ]; then 
+sudo -n $1
 
-	echo $user_input | sudo -S $1 
+if [ $? -ne 0 ]; then
+
+	user_input=$(zenity --password )
 	
-	if [ $? -ne 0 ]; then
-		notify-send -t 2000 -u critical "ta malo webon"
-	fi
+	if [ $? -eq 0 ]; then 
 
-else
-    echo "Cancelao"
+		echo $user_input | sudo -S $1 
+		
+		if [ $? -ne 0 ]; then
+			notify-send -t 2000 -u critical "ta malo webon"
+		fi
+
+	else
+		echo "Cancelao"
+	fi
 fi
