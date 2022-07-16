@@ -13,9 +13,11 @@ if [ $? -ne 0 ]; then
 		
 		if [ $? -ne 0 ]; then
 			notify-send -t 2000 -u critical "ta malo webon"
+			exit 1
 		fi
 
 	else
 		echo "Cancelao"
+		exit 1
 	fi
 fi
