@@ -7,12 +7,18 @@ if [ $? -ne 0 ]; then
 
 	user_input=$(zenity --password )
 	
-	if [ $? -eq 0 ]; then 
+  echo "input success"
 
-		echo $user_input | sudo -S $1 
+	if [ $? -eq 0 ]; then 
+   
+    echo check
 		
+    echo $user_input | sudo -S $1 
+	  
+    echo "--->$?"	
 		if [ $? -ne 0 ]; then
-			notify-send -t 2000 -u critical "ta malo webon"
+			echo "Bad req"
+      notify-send -t 2000 -u critical "ta malo webon"
 			exit 1
 		fi
 
